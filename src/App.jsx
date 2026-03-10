@@ -1,4 +1,5 @@
 import './App.css'
+import chef from "./images/chef.jpg"
 
 let language = "JavaScript";
 
@@ -24,11 +25,14 @@ const dishObjects = items.map((dish, i) => ({
 
 function Main({dishes}) {
   return (
+    <main>
+      <img src={chef} height={200} alt='photo of smiling chef'/>
     <ul>
       {dishes.map((dish) => (
         <li key={dish.id} style={{ listStyleType: 'none'}}>{dish.title}</li>
       ))}
     </ul>
+    </main>
     )
 }
 
